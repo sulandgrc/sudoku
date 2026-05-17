@@ -1,0 +1,2 @@
+# sudoku
+Kiro generated sudoku
