@@ -1,0 +1,16 @@
+{
+  "name": "sudoku",
+  "version": "1.0.0",
+  "description": "Simple Sudoku web application",
+  "type": "module",
+  "scripts": {
+    "lint": "eslint js/**/*.js",
+    "test": "node --experimental-vm-modules node_modules/.bin/jest --runInBand",
+    "serve": "npx serve ."
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "jest": "^29.7.0",
+    "jest-environment-node": "^29.7.0"
+  }
+}
