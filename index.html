@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sudoku</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <h1>SUDOKU</h1>
+  <p class="subtitle">Fill the grid so every row, column, and 3×3 box contains 1–9</p>
+
+  <div id="timer">00:00</div>
+
+  <div class="controls">
+    <select id="difficulty">
+      <option value="easy">Easy</option>
+      <option value="medium" selected>Medium</option>
+      <option value="hard">Hard</option>
+    </select>
+    <button onclick="app.newGame()">New Game</button>
+    <button class="secondary" onclick="app.solvePuzzle()">Solve</button>
+    <button class="secondary" onclick="app.checkBoard()">Check</button>
+  </div>
+
+  <div id="board"></div>
+
+  <div class="numpad" id="numpad"></div>
+
+  <div id="status"></div>
+
+  <script type="module">
+    import { newGame, checkBoard, solvePuzzle } from './js/app.js';
+    // Expose to inline onclick handlers
+    window.app = { newGame, checkBoard, solvePuzzle };
+  </script>
+
+</body>
+</html>
